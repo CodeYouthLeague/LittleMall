@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="LittleMall:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>LittleMall</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="LittleMall-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="LittleMall:war exploded" />
+    </root>
+  </artifact>
+</component>
