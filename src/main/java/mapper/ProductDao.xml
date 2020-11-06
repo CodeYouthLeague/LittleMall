@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:接口的全限定名称-->
+<mapper namespace="mapper.ProductDao">
+    <!--id:方法的名称  resultType:返回值类型(若为对象，为全限定名称或别名))-->
+    <select id="selectProducts" resultType="entity.Product">
+        select PRODUCT_ID,
+               PRODUCT_NAME,
+               PRODUCT_DESCRIPTION,
+               PRODUCT_PRICE,
+               PRODUCT_STOCK,
+               PRODUCT_FID,
+               PRODUCT_CID,
+               PRODUCT_FILENAME
+        from product
+    </select>
+
+    <insert id="insertProduct">
+        insert into product(PRODUCT_ID, PRODUCT_NAME, PRODUCT_DESCRIPTION, PRODUCT_PRICE,
+                            PRODUCT_STOCK, PRODUCT_FID, PRODUCT_CID, PRODUCT_FILENAME)
+        VALUES (null, #{PRODUCT_NAME}, #{PRODUCT_DESCRIPTION}, #{PRODUCT_PRICE},
+                #{PRODUCT_STOCK}, #{PRODUCT_FID}, #{PRODUCT_CID}, #{PRODUCT_FILENAME})
+    </insert>
+
+    <delete id="deleteProduct">
+        delete
+        from product
+        where PRODUCT_ID = #{PRODUCT_ID}
+    </delete>
+
+    <update id="updateProduct">
+        update product
+        set PRODUCT_NAME=#{PRODUCT_NAME},
+            PRODUCT_DESCRIPTION=#{PRODUCT_DESCRIPTION},
+            PRODUCT_PRICE=#{PRODUCT_PRICE},
+            PRODUCT_STOCK=#{PRODUCT_STOCK},
+            PRODUCT_FID=#{PRODUCT_FID},
+            PRODUCT_CID=#{PRODUCT_CID},
+            PRODUCT_FILENAME=#{PRODUCT_FILENAME}
+        where PRODUCT_ID = #{PRODUCT_ID}
+    </update>
+</mapper>

@@ -23,6 +23,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> selectUsers() {
-        return userDao.selectUser();
+        return userDao.selectUsers();
     }
 }

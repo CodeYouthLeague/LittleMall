@@ -10,9 +10,20 @@
     </insert>
 
     <!--id:方法的名称  resultType:返回值类型(若为对象，为全限定名称或别名))-->
-    <select id="selectUser" resultType="User">
-        select USER_ID, USER_NAME, USER_PASSWORD from user
+    <select id="selectUsers" resultType="entity.User">
+        select USER_ID, USER_NAME, USER_PASSWORD, USER_SEX, USER_BIRTHDAY, USER_EMAIL, USER_MOBILE, USER_ADDRESS, USER_STATUS from user
     </select>
 
+    <delete id="deleteUser">
+        delete from user where USER_ID=#{USER_ID} and USER_STATUS!=2
+    </delete>
 
+    <update id="updateUser">
+        update user set USER_NAME=#{USER_NAME}, USER_PASSWORD=#{USER_PASSWORD}, USER_SEX=#{USER_SEX}, USER_BIRTHDAY=#{USER_BIRTHDAY},
+        USER_EMAIL=#{USER_EMAIL}, USER_MOBILE=#{USER_MOBILE}, USER_ADDRESS=#{USER_ADDRESS}, USER_STATUS=#{USER_STATUS} where USER_ID = #{USER_ID}
+    </update>
+
+    <select id="selectUserById" resultType="entity.User">
+        select USER_ID, USER_NAME, USER_PASSWORD, USER_SEX, USER_BIRTHDAY, USER_EMAIL, USER_MOBILE, USER_ADDRESS, USER_STATUS from user where USER_ID = #{USER_ID}
+    </select>
 </mapper>
