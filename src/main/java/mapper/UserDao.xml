@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:接口的全限定名称-->
+<mapper namespace="mapper.UserDao">
+    <insert id="insertUser">
+        insert into user(USER_ID, USER_NAME, USER_PASSWORD, USER_SEX, USER_BIRTHDAY, USER_EMAIL, USER_MOBILE, USER_ADDRESS)
+        values (#{USER_ID}, #{USER_NAME}, #{USER_PASSWORD}, #{USER_SEX}, #{USER_BIRTHDAY}, #{USER_EMAIL}, #{USER_MOBILE}, #{USER_ADDRESS})
+    </insert>
+
+    <!--id:方法的名称  resultType:返回值类型(若为对象，为全限定名称或别名))-->
+    <select id="selectUser" resultType="User">
+        select USER_ID, USER_NAME, USER_PASSWORD from user
+    </select>
+
+
+</mapper>

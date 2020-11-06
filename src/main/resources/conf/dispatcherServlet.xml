@@ -16,10 +16,22 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!-- SpringMVC使用<mvc:annotation-driven>自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter -->
-    <mvc:annotation-driven/>
     <!--
+      SpringMVC使用<mvc:annotation-driven>自动加载RequestMappingHandlerMapping和RequestMappingHandlerAdapter
       1. 响应ajax请求，返回json
       2. 解决静态资源访问问题。
     -->
+    <mvc:annotation-driven/>
+    <!--声明让Tomcat服务器处理静态资源(.js .html .css等)-->
+    <mvc:default-servlet-handler/>
+
+    <!--声明拦截器(拦截器可以有多个)-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!--指定要拦截的请求地址path-->
+            <mvc:mapping path="/admin/**"/>
+            <!--拦截器对象-->
+            <bean class="handler.Interceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
