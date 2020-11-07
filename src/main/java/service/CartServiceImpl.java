@@ -2,9 +2,11 @@ package service;
 
 import entity.Cart;
 import entity.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CartServiceImpl implements CartService {
     @Override
     public int addCart(Cart cart) {
