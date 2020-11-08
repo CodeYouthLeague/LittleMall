@@ -1,29 +1,34 @@
 package service;
 
 import entity.Product;
+import mapper.ProductDao;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
+    @Resource
+    private ProductDao productDao;
+
     @Override
-    public int addProduct(Product product) {
-        return 0;
+    public boolean addProduct(Product product) {
+        return productDao.insertProduct(product) == 1;
     }
 
     @Override
     public List<Product> selectProducts() {
-        return null;
+        return productDao.selectProducts();
     }
 
     @Override
-    public int removeProduct(Product product) {
-        return 0;
+    public boolean removeProduct(Product product) {
+        return productDao.deleteProduct(product) == 1;
     }
 
     @Override
-    public int updateProduct(Product product) {
-        return 0;
+    public boolean updateProduct(Product product) {
+        return productDao.updateProduct(product) == 1;
     }
 }

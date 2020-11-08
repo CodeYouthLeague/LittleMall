@@ -16,9 +16,7 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public int addUser(User user) {
-        return userDao.insertUser(user);
-    }
+    public boolean addUser(User user) { return userDao.insertUser(user) == 1; }
 
     @Override
     public List<User> selectUsers() {
@@ -26,17 +24,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int removeUser(User user) {
-        return 0;
+    public boolean removeUser(User user) {
+        return userDao.deleteUser(user) == 1;
     }
 
     @Override
-    public int updateUser(User user) {
-        return 0;
+    public boolean updateUser(User user) {
+        return userDao.updateUser(user) == 1;
     }
 
     @Override
     public User selectUserById(String USER_ID) {
-        return null;
+        return userDao.selectUserById(USER_ID);
     }
 }

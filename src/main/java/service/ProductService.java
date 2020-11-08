@@ -10,7 +10,7 @@ public interface ProductService {
      * @param product 商品
      * @return 1 表示插入成功 0 表示插入失败
      */
-    int addProduct(Product product);
+    boolean addProduct(Product product);
 
     /**
      * 查询所有商品
@@ -23,12 +23,12 @@ public interface ProductService {
      * @param product 商品
      * @return 1 表示删除成功 0 表示删除失败
      */
-    int removeProduct(Product product);
+    boolean removeProduct(Product product);
 
     /**
      * 更新商品信息
      * @param product 商品
      * @return 1 表示更新成功 0 表示更新失败
      */
-    int updateProduct(Product product);
+    boolean updateProduct(Product product);
 }
