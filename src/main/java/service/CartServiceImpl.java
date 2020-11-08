@@ -2,34 +2,39 @@ package service;
 
 import entity.Cart;
 import entity.User;
+import mapper.CartDao;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class CartServiceImpl implements CartService {
+    @Resource
+    private CartDao cartDao;
+
     @Override
-    public int addCart(Cart cart) {
-        return 0;
+    public boolean addCart(Cart cart) {
+        return cartDao.insertCart(cart) == 1;
     }
 
     @Override
     public List<Cart> selectCarts() {
-        return null;
+        return cartDao.selectCarts();
     }
 
     @Override
-    public int removeCart(Cart cart) {
-        return 0;
+    public boolean removeCart(Cart cart) {
+        return cartDao.deleteCart(cart) == 1;
     }
 
     @Override
-    public int updateCart(Cart cart) {
-        return 0;
+    public boolean updateCart(Cart cart) {
+        return cartDao.updateCart(cart) == 1;
     }
 
     @Override
     public List<Cart> selectCartById(User user) {
-        return null;
+        return cartDao.selectCartById(user);
     }
 }

@@ -1,29 +1,34 @@
 package service;
 
 import entity.Category;
+import mapper.CategoryDao;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
+    @Resource
+    private CategoryDao categoryDao;
+
     @Override
-    public int addCategory(Category category) {
-        return 0;
+    public boolean addCategory(Category category) {
+        return categoryDao.insertCategory(category) == 1;
     }
 
     @Override
     public List<Category> selectAllCategory() {
-        return null;
+        return categoryDao.selectAllCategory();
     }
 
     @Override
-    public int removeCategory(Category category) {
-        return 0;
+    public boolean removeCategory(Category category) {
+        return categoryDao.deleteCategory(category) == 1;
     }
 
     @Override
-    public int updateCategory(Category category) {
-        return 0;
+    public boolean updateCategory(Category category) {
+        return categoryDao.updateCategory(category) == 1;
     }
 }

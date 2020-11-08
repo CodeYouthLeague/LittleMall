@@ -10,7 +10,7 @@ public interface UserService {
      * @param user 新用户
      * @return 1 表示添加成功 0 表示添加失败
      */
-    int addUser(User user);
+    boolean addUser(User user);
 
     /**
      * 查询所有用户
@@ -23,14 +23,14 @@ public interface UserService {
      * @param user 用户
      * @return 1 表示删除成功 0 表示删除失败
      */
-    int removeUser(User user);
+    boolean removeUser(User user);
 
     /**
      * 更新用户数据
      * @param user 用户
      * @return 1 表示更新成功 0 表示更新失败
      */
-    int updateUser(User user);
+    boolean updateUser(User user);
 
     /**
      * 通过用户ID查询用户

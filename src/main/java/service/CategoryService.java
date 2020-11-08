@@ -10,7 +10,7 @@ public interface CategoryService {
      * @param category 目录
      * @return 1 表示插入成功 0 表示插入失败
      */
-    int addCategory(Category category);
+    boolean addCategory(Category category);
 
     /**
      * 查询所有目录
@@ -23,12 +23,12 @@ public interface CategoryService {
      * @param category 目录
      * @return 1 表示删除成功 0 表示删除失败
      */
-    int removeCategory(Category category);
+    boolean removeCategory(Category category);
 
     /**
      * 更新目录
      * @param category 目录
      * @return 1 表示更新成功 0 表示更新失败
      */
-    int updateCategory(Category category);
+    boolean updateCategory(Category category);
 }
