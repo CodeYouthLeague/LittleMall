@@ -26,4 +26,9 @@
     <select id="selectUserById" resultType="entity.User">
         select USER_ID, USER_NAME, USER_PASSWORD, USER_SEX, USER_BIRTHDAY, USER_EMAIL, USER_MOBILE, USER_ADDRESS, USER_STATUS from user where USER_ID = #{USER_ID}
     </select>
+
+    <select id="selectUserByUserIdAndPassword" resultType="entity.User">
+               select USER_ID, USER_NAME, USER_PASSWORD, USER_SEX, USER_BIRTHDAY, USER_EMAIL, USER_MOBILE, USER_ADDRESS, USER_STATUS
+               from user where USER_ID = #{USER_ID} and USER_PASSWORD = #{USER_PASSWORD}
+    </select>
 </mapper>

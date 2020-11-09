@@ -38,4 +38,11 @@ public interface UserService {
      * @return 查询结果
      */
     User selectUserById(String USER_ID);
+
+    /**
+     * 通过用户Id和用户密码查询用户
+     * @param user 保存有用户民和密码的用户
+     * @return 查询结果
+     */
+    User selectUserByUserIdAndPassword(User user);
 }

@@ -31,4 +31,18 @@ public interface ProductService {
      * @return 1 表示更新成功 0 表示更新失败
      */
     boolean updateProduct(Product product);
+
+    /**
+     * 根据Fid查询所有商品
+     * @param PRODUCT_FID 父目录Id
+     * @return 查询结果
+     */
+    List<Product> selectByFid(int PRODUCT_FID);
+
+    /**
+     * 根据Cid查询所有商品
+     * @param PRODUCT_CID 子目录Id
+     * @return 查询结果
+     */
+    List<Product> selectByCid(int PRODUCT_CID);
 }

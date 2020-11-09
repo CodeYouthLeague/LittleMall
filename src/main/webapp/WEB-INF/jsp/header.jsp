@@ -13,8 +13,8 @@
             </c:if>
             
             <c:if test="${isLogin ==1 }">
-
-           欢迎您: <a href="mygxin.jsp" id="login">${name.USER_NAME }</a>
+            
+           你好: <a href="login.jsp" id="login">${name.USER_NAME }</a>
             </c:if>
             
             <c:if test="${isAdminLogin  ==1 }">
@@ -40,16 +40,16 @@
         <ul class="clearfix" id="bott">
             <li><a href="indexselect">首页</a></li>
             
-            <c:forEach var="f" items="${flist}">
+            <c:forEach var="f" items="${flist }">
           
-            <li><a href="selectproductlist?fid=${f.CATE_ID}">${f.CATE_NAME}</a>
+            <li><a href="selectproductlist?fid=${f.CATE_ID }">${f.CATE_NAME }</a>
                 <div class="sList2">
                     <div class="clearfix">
                     
-                    		<c:forEach var="c" items="${clist}">
+                    		<c:forEach var="c" items="${clist }">
                     		
-                   <c:if test="${f.CATE_ID == c.CATE_PARENT_ID}">
-                    <a href="selectproductlist?cid=${c.CATE_ID}">${c.CATE_NAME}</a>
+                   <c:if test="${f.CATE_ID == c.CATE_PARENT_ID }">
+                    <a href="selectproductlist?cid=${c.CATE_ID }">${c.CATE_NAME }</a>
                     </c:if>
                     	</c:forEach>
                     	</div>

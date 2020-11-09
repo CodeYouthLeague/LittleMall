@@ -27,4 +27,12 @@
             CATE_PARENT_ID=#{CATE_PARENT_ID}
         where CATE_ID = #{CATE_ID}
     </update>
+
+    <select id="selectFatherCategory" resultType="entity.Category">
+        select CATE_ID, CATE_NAME, CATE_PARENT_ID from category where CATE_PARENT_ID = 0;
+    </select>
+
+    <select id="selectSonCategory" resultType="entity.Category">
+        select CATE_ID, CATE_NAME, CATE_PARENT_ID from category where CATE_PARENT_ID != 0;
+    </select>
 </mapper>

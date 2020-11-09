@@ -31,4 +31,10 @@ public class CategoryServiceImpl implements CategoryService {
     public boolean updateCategory(Category category) {
         return categoryDao.updateCategory(category) == 1;
     }
+
+    @Override
+    public List<Category> selectFatherCategory() { return categoryDao.selectFatherCategory(); }
+
+    @Override
+    public List<Category> selectSonCategory() { return categoryDao.selectSonCategory(); }
 }
