@@ -31,4 +31,16 @@ public interface CategoryService {
      * @return 1 表示更新成功 0 表示更新失败
      */
     boolean updateCategory(Category category);
+
+    /**
+     * 查询所有父目录
+     * @return 查询结果
+     */
+    List<Category> selectFatherCategory();
+
+    /**
+     * 查询所有子目录
+     * @return 查询结果
+     */
+    List<Category> selectSonCategory();
 }

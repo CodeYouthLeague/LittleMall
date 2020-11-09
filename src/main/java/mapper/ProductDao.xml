@@ -41,4 +41,30 @@
             PRODUCT_FILENAME=#{PRODUCT_FILENAME}
         where PRODUCT_ID = #{PRODUCT_ID}
     </update>
+
+    <select id="selectByFid" resultType="entity.Product">
+        select PRODUCT_ID,
+               PRODUCT_NAME,
+               PRODUCT_DESCRIPTION,
+               PRODUCT_PRICE,
+               PRODUCT_STOCK,
+               PRODUCT_FID,
+               PRODUCT_CID,
+               PRODUCT_FILENAME
+        from product
+        where PRODUCT_FID = #{PRODUCT_FID}
+    </select>
+
+    <select id="selectByCid" resultType="entity.Product">
+        select PRODUCT_ID,
+               PRODUCT_NAME,
+               PRODUCT_DESCRIPTION,
+               PRODUCT_PRICE,
+               PRODUCT_STOCK,
+               PRODUCT_FID,
+               PRODUCT_CID,
+               PRODUCT_FILENAME
+        from product
+        where PRODUCT_CID = #{PRODUCT_CID}
+    </select>
 </mapper>

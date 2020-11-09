@@ -32,4 +32,15 @@ public interface CategoryDao {
      */
     int updateCategory(Category category);
 
+    /**
+     * 查询所有父目录
+     * @return 查询结果
+     */
+    List<Category> selectFatherCategory();
+
+    /**
+     * 查询所有子目录
+     * @return 查询结果
+     */
+    List<Category> selectSonCategory();
 }
