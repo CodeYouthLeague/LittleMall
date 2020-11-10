@@ -31,25 +31,25 @@
                
                 <img src="img/ewm.png"/></a>
                  <c:if test="${isLogin ==1 }">
-                <a href="cart.html">  <img src="img/gwc.png"/></a>
+                <a href="cart.jsp">  <img src="img/gwc.png"/></a>
                 </c:if>
                     <p><a href="#"><img src="img/smewm.png"/></a></p></div>
 
             </div>
         </div>
         <ul class="clearfix" id="bott">
-            <li><a href="indexselect">首页</a></li>
+            <li><a href="Category/indexSelect">首页</a></li>
             
             <c:forEach var="f" items="${flist}">
           
-            <li><a href="selectproductlist?fid=${f.CATE_ID}">${f.CATE_NAME}</a>
+            <li><a href="Category/selectProductList?fid=${f.CATE_ID}">${f.CATE_NAME}</a>
                 <div class="sList2">
                     <div class="clearfix">
                     
                     		<c:forEach var="c" items="${clist}">
                     		
                    <c:if test="${f.CATE_ID == c.CATE_PARENT_ID}">
-                    <a href="selectproductlist?cid=${c.CATE_ID}">${c.CATE_NAME}</a>
+                    <a href="Category/selectProductList?cid=${c.CATE_ID}">${c.CATE_NAME}</a>
                     </c:if>
                     	</c:forEach>
                     	</div>

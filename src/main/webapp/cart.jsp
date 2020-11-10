@@ -20,7 +20,7 @@
                 <form action="#" method="get" class="fl"><input type="text" placeholder="搜索"/><input type="button"/>
                 </form>
                 <div class="btn fl clearfix"><a href="mygxin.html"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
-                        src="img/ewm.png"/></a><a href="cart.html"><img src="img/gwc.png"/></a>
+                        src="img/ewm.png"/></a><a href="cart.jsp"><img src="img/gwc.png"/></a>
                     <p><a href="#"><img src="img/smewm.png"/></a></p></div>
             </div>
         </div>
@@ -77,7 +77,7 @@
     <!-----------------site------------------->
     <div class="site"><p class=" wrapper clearfix"><span class="fl">购物车</span><img class="top"
                                                                                    src="img/temp/cartTop01.png"><a
-            href="indexselect" class="fr">继续购物&gt;</a></p></div><!-----------------table------------------->
+            href="Category/indexSelect" class="fr">继续购物&gt;</a></p></div><!-----------------table------------------->
     <div class="table wrapper">
         <div class="tr">
             <div>商品</div>
@@ -149,7 +149,7 @@ function toorder(){
 <div class="mask"></div>
 <div class="tipDel"><p>确定要删除该商品吗？</p>
     <p class="clearfix"><a class="fl cer" href="#">确定</a><a class="fr cancel" href="#">取消</a></p></div><!--返回顶部-->
-<div class="gotop"><a href="cart.html">
+<div class="gotop"><a href="cart.jsp">
     <dl>
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
