@@ -17,13 +17,13 @@
             </p>
                 <form action="#" method="get" class="fl"><input type="text" placeholder="搜索"/><input type="button"/>
                 </form>
-                <div class="btn fl clearfix"><a href="mygxin.html"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
-                        src="img/ewm.png"/></a><a href="cart.html"><img src="img/gwc.png"/></a>
+                <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
+                        src="img/ewm.png"/></a><a href="cart.jsp"><img src="img/gwc.png"/></a>
                     <p><a href="#"><img src="img/smewm.png"/></a></p></div>
             </div>
         </div>
         <ul class="clearfix" id="bott">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="index.jsp">首页</a></li>
             <li><a href="#">所有商品</a>
                 <div class="sList">
                     <div class="wrapper  clearfix"><a href="paint.html">
@@ -71,7 +71,7 @@
     </div>
 </div><!------------------------------idea------------------------------>
 <div class="address mt" id="add">
-    <div class="wrapper clearfix"><a href="index.html" class="fl">首页</a><span>/</span><a href="mygxin.html" class="on">个人中心</a>
+    <div class="wrapper clearfix"><a href="index.jsp" class="fl">首页</a><span>/</span><a href="mygxin.jsp" class="on">个人中心</a>
     </div>
 </div><!------------------------------Bott------------------------------>
 <div class="Bott">
@@ -81,13 +81,13 @@
                 <p class="clearfix"><span class="fl">[${name.USER_NAME }]</span><span>[<a href="logout">退出登录</a>]</span></p></h3>
             <div><h4>我的交易</h4>
                 <ul>
-                    <li><a href="cart.html">我的购物车</a></li>
+                    <li><a href="cart.jsp">我的购物车</a></li>
                     <li><a href="myorderq.html">我的订单</a></li>
                     <li><a href="myprod.html">评价晒单</a></li>
                 </ul>
                 <h4>个人中心</h4>
                 <ul>
-                    <li class="on"><a href="mygxin.html">我的中心</a></li>
+                    <li class="on"><a href="mygxin.jsp">我的中心</a></li>
                     <li><a href="address.html">地址管理</a></li>
                 </ul>
                 <h4>账户管理</h4>
@@ -116,7 +116,7 @@
         </div>
     </div>
 </div><!--返回顶部-->
-<div class="gotop"><a href="cart.html">
+<div class="gotop"><a href="cart.jsp">
     <dl>
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
@@ -126,7 +126,7 @@
         <dt><img src="img/gt2.png"/></dt>
         <dd>联系<br/>客服</dd>
     </dl>
-</a><a href="mygxin.html">
+</a><a href="mygxin.jsp">
     <dl>
         <dt><img src="img/gt3.png"/></dt>
         <dd>个人<br/>中心</dd>

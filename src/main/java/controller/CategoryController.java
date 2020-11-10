@@ -37,4 +37,13 @@ public class CategoryController {
         modelAndView.setViewName("forward:/productlist.jsp");
         return modelAndView;
     }
+
+    @RequestMapping("/indexSelect")
+    private ModelAndView indexSelect(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("flist",categoryService.selectFatherCategory());
+        modelAndView.addObject("clist",categoryService.selectSonCategory());
+        modelAndView.setViewName("forward:/index.jsp");
+        return modelAndView;
+    }
 }
