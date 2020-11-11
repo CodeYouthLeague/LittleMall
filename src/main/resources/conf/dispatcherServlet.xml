@@ -29,7 +29,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <!--指定要拦截的请求地址path-->
-            <mvc:mapping path="/admin/**"/>
+            <mvc:mapping path="/manage/**"/>
             <!--拦截器对象-->
             <bean class="handler.Interceptor"/>
         </mvc:interceptor>
