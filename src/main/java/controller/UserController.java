@@ -46,14 +46,6 @@ public class UserController {
         return modelAndView;
     }
 
-    @RequestMapping("/select")
-    @ResponseBody
-    public List<User> selectUsers(){
-        List<User> users = userService.selectUsers();
-        System.out.println("程序已执行到这里！");
-        return users;
-    }
-
     @RequestMapping(value = "/login")
     public ModelAndView loginUser(HttpServletRequest request, HttpServletResponse response, User user){
         ModelAndView modelAndView = new ModelAndView();
@@ -72,7 +64,9 @@ public class UserController {
             modelAndView.addObject("user",result);
             modelAndView.setViewName("redirect:/index.jsp");
         }else {
-            modelAndView.setViewName("result");
+            request.setAttribute("msg","用户名或者密码错误哦！");
+            modelAndView.addObject("msg","用户名或者密码错误！");
+            modelAndView.setViewName("/login.jsp");
         }
         return modelAndView;
     }

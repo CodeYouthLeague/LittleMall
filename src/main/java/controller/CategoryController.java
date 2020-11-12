@@ -43,7 +43,7 @@ public class CategoryController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("flist",categoryService.selectFatherCategory());
         modelAndView.addObject("clist",categoryService.selectSonCategory());
-        modelAndView.setViewName("forward:/index.jsp");
+        modelAndView.setViewName("redirect:/index.jsp");
         return modelAndView;
     }
 }

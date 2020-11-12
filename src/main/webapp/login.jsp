@@ -5,18 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
-    <link rel="stylesheet" type="text/css" href="css/public.css"/>
-    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/public.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login.css"/>
 </head>
 <body><!-------------------login-------------------------->
 <div class="login">
-    <form action="User/login" method="post"><h1><a href="index.html"></a></h1>
+    <form action="${pageContext.request.contextPath}/User/login" method="post"><h1><a href="index.html"></a></h1>
         <p></p>
         <!--  div class="msg-warn hide"><b></b>公共场所不建议自动登录，以防账号丢失</div-->
-        <p><input type="text" name="USER_ID" value="" placeholder="昵称/邮箱/手机号"></p>
+        <p><input type="text" name="USER_ID" value="" placeholder="昵称/邮箱/手机号"></p><span style="color: red">${msg}</span>
         <p><input type="password" name="USER_PASSWORD" value="" placeholder="密码"></p>
         <p><input type="submit" name="" value="登  录"></p>
-        <p class="txt"><a class="" href="register.jsp">免费注册</a><a href="forget.html">忘记密码？</a></p></form>
+        <p class="txt"><a class="" href="${pageContext.request.contextPath}/register.jsp">免费注册</a><a href="forget.html">忘记密码？</a></p></form>
 </div>
 </body>
 </html>
